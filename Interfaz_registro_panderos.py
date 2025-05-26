@@ -118,7 +118,7 @@ def actualizar_reporte_gen():
 
         data_frame_general = pd.DataFrame(dict_producido)
 
-        img_pastelisimo = fpp.AnalizarConPastelisimo(data_frame_general).graficar_pastelisimo()
+        img_pastelisimo = fpp.AnalizarConPastelote(data_frame_general).graficar_pastelisimo()
         mostrar_imagenes_pie(img_pastelisimo)
 
 
@@ -317,7 +317,16 @@ etiq_label_promedio=tk.Label(fra_rep_der_der_sup, text="", textvariable=label_pr
 etiq_label_promedio.place(x=0, y=2)
 
 
+##########################################################################################################
 
+#ficha_registrar_prod = tk.Frame(ficheros, width=427, height=414)
+
+campo_estad_izq= tk.Frame(ficha_estadisticas, width=213, height=414, bg="blue")
+campo_estad_izq.pack(side=tk.LEFT)
+campo_estad_izq.pack_propagate(False)
+
+lab_estad_izqu= tk.LabelFrame(campo_estad_izq, width=209, height=410)
+lab_estad_izqu.pack(side=tk.TOP)
 
 
 

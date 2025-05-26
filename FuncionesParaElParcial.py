@@ -37,8 +37,8 @@ class AnalizarConBarras:
 
     sns.barplot(data= self.df, x="Eficiencia" , y="Tipo de pan", ax=ax[1])
     ax[1].set_title("Eficiencia por tipo de pan", fontsize=6)
-    ax[1].set_xlabel("Eficiencia", fontsize=4)
-    ax[1].set_ylabel("Tipo de pan", fontsize=4)
+    ax[1].set_xlabel("Eficiencia", fontsize=6)
+    ax[1].set_ylabel("Tipo de pan", fontsize=6)
     grafico.tight_layout()    ################!!!!!!!!!!!!!!!!!!!!!!!!!
 
     return pasar_a_pil(grafico)
