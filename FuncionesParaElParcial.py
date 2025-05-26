@@ -31,14 +31,14 @@ class AnalizarConBarras:
     grafico, ax = plt.subplots(1, 2, figsize=(4.0,1.6), dpi=100) #start
   
     sns.barplot(data= self.df, x="C. producida" , y="Tipo de pan", ax=ax[0])
-    ax[0].set_title("Producción del operario por tipo de pan")
-    ax[0].set_xlabel("C. producida")
-    ax[0].set_ylabel("Tipo de pan")
+    ax[0].set_title("Producción del operario por tipo de pan", fontsize=6)
+    ax[0].set_xlabel("C. producida", fontsize=4)
+    ax[0].set_ylabel("Tipo de pan", fontsize=4)
 
     sns.barplot(data= self.df, x="Eficiencia" , y="Tipo de pan", ax=ax[1])
-    ax[1].set_title("Eficiencia por tipo de pan")
-    ax[1].set_xlabel("Eficiencia")
-    ax[1].set_ylabel("Tipo de pan")
+    ax[1].set_title("Eficiencia por tipo de pan", fontsize=6)
+    ax[1].set_xlabel("Eficiencia", fontsize=4)
+    ax[1].set_ylabel("Tipo de pan", fontsize=4)
     grafico.tight_layout()    ################!!!!!!!!!!!!!!!!!!!!!!!!!
 
     return pasar_a_pil(grafico)
@@ -50,12 +50,12 @@ class AnalizarConPastelote:
 
   def graficar_pastelisimo(self):
 
+    resumen = self.df["Cumple meta"].value_counts()
+    colores = ["red","green"]
+
     grafico, ax = plt.subplots(1, 1, figsize=(1.88,1.08), dpi=100) #start
-
-    resumen = self.df["Cumple meta"].value_counts
-    colores = ["Red","green"]
-
-    plt.pie(data=resumen, labels= resumen.index, colors=colores, ax=ax, shadow=True)
+    
+    ax.pie(resumen, labels=resumen.index, colors=colores, shadow=True, textprops={'fontsize':6})
     ax.set_title("¿Cuántos cumplen?")
     grafico.tight_layout()    ################!!!!!!!!!!!!!!!!!!!!!!!!!
 
