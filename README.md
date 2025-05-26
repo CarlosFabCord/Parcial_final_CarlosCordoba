@@ -1,3 +1,5 @@
+FLUJOGRAMA: https://drive.google.com/file/d/1Q8vT0hsLihg9MdL40ddhU371TTOzsr0h/view?usp=sharing
+
 El archivo principal es Interfaz_registro_panderos.py
 Debe abrirse con el archivo FuncionesParaElParcial.py, que funge como biblioteca de funciones para este proyecto.
 
